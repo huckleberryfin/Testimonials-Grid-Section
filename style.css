@@ -36,12 +36,11 @@ main {
     max-width: 1000px;
     display: grid;
     gap: 1rem 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "one one two three"
     "four five five three ";
 }
+
 
 .one { grid-area: one; }
 .two { grid-area: two; }
@@ -153,19 +152,56 @@ main {
 }
 
 
+@media (max-width: 1020px) {
+
+    main {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        grid-template-areas:
+        "one one two"
+        "four five five "
+        "three three three";   
+    }
+   
+}
+
+
+@media (max-width: 850px) {
+
+    main {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        grid-template-areas:
+        "one one"
+        "two four"
+        "five five "
+        "three three";   
+    }
+   
+}
+
+@media (max-width: 570px) {
+
+    main {
+        padding-top: 2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        grid-template-areas:
+        "one"
+        "two"
+        "four"
+        "five"
+        "three";   
+    }
+   
+}
+
+
+
 .footer { font-size: 11px; text-align: center; };
 .footer a { color: hsl(228, 45%, 44%); };
 
 
-@media only screen and (max-width: 1020px) {
 
-    /* body {
-        background-color: black;
-    } */
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-}
